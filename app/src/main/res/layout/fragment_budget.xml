@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginBottom="16dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center"
+            android:background="@drawable/bg_card" android:padding="12dp" android:layout_marginEnd="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Income" android:textSize="11sp" android:textColor="#64748B" />
+            <TextView android:id="@+id/tv_income" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="€0" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="#22C55E" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center"
+            android:background="@drawable/bg_card" android:padding="12dp" android:layout_marginHorizontal="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Expenses" android:textSize="11sp" android:textColor="#64748B" />
+            <TextView android:id="@+id/tv_expense" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="€0" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="#EF4444" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:orientation="vertical" android:gravity="center"
+            android:background="@drawable/bg_card" android:padding="12dp" android:layout_marginStart="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Balance" android:textSize="11sp" android:textColor="#64748B" />
+            <TextView android:id="@+id/tv_balance" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="€0" android:textSize="18sp"
+                android:textStyle="bold" android:textColor="#0F172A" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Recent Entries" android:textStyle="bold" android:textSize="14sp"
+        android:textColor="#1E293B" android:layout_marginBottom="8dp" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_entries"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:paddingBottom="16dp" />
+</LinearLayout>

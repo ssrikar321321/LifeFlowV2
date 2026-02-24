@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <com.google.android.material.tabs.TabLayout android:id="@+id/tab_home_sub"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" app:tabMode="fixed" app:tabGravity="fill">
+        <com.google.android.material.tabs.TabItem android:text="🧹 Chores"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.tabs.TabItem android:text="🛒 Grocery"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.google.android.material.tabs.TabLayout>
+    <!-- Chore section -->
+    <LinearLayout android:id="@+id/chore_section" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_chores"
+            android:layout_width="match_parent" android:layout_height="match_parent"
+            android:clipToPadding="false" android:paddingBottom="16dp" />
+    </LinearLayout>
+    <!-- Grocery section -->
+    <LinearLayout android:id="@+id/grocery_section" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/et_grocery_quick" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1" android:hint="Add item..."
+                android:background="@drawable/bg_input" android:padding="10dp" android:textSize="14sp" />
+            <Button android:id="@+id/btn_add_grocery" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Add" android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <Button android:id="@+id/btn_clear_bought" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Clear bought" android:textSize="12sp"
+            style="?android:attr/borderlessButtonStyle" android:textColor="#EF4444"
+            android:layout_marginBottom="4dp" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_grocery"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:clipToPadding="false" android:paddingBottom="16dp" />
+    </LinearLayout>
+</LinearLayout>
